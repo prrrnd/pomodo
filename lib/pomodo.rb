@@ -1,14 +1,15 @@
+require "json"
+require "luxafor"
+
 require "pomodo/version"
+require "pomodo/configuration"
+
 require "pomodo/usage"
 require "pomodo/init"
 require "pomodo/start"
-
-require "luxafor"
+require "pomodo/stop"
 
 module Pomodo
-  CONFIG_DIR = [ENV["HOME"], ".pomodo"].join("/").freeze
-  CONFIG_PATH = [CONFIG_DIR, "config"].join("/").freeze
-
   class Error < StandardError; end
   # Your code goes here...
 end

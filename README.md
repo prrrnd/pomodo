@@ -4,8 +4,10 @@ Simple pomodoro CLI tool with Luxafor Flag support
 
 ## Installation
 
-`brew tap prrrnd/pomodo`
-`brew install pomodo`
+```sh
+brew tap prrrnd/pomodo
+brew install pomodo
+```
 
 ## Usage
 
@@ -18,10 +20,30 @@ pomodo start
 
 # Start a pomodoro of 60 min with 10 min break
 pomodo start 60 10
+
+# Stop the pomodo daemon
+pomodo stop
 ```
 
 The Luxafor Flag is automatically updated from red to green to red.
 A macOS notification pops up to remind you to take a break.
+
+
+## Configuration
+
+Can be edited at `~/.pomodo/config` - default:
+
+```json
+{
+  "schema": 1,
+  "luxafor_id": null,
+  "notifications": {
+    "work": false,
+    "rest": true
+  },
+  "pid": null
+}
+```
 
 ## Development
 
